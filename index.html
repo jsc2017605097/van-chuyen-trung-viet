@@ -73,6 +73,20 @@
         @import url("css/style.css");
         @import url("css/giaodienmobile.css");
     </style>
+    <!-- check screen -->
+    <script>
+        function checkScreenSize() {
+            if (window.innerWidth > 768) {
+                window.location.href = "/desktop";
+            }
+        }
+
+        // Kiểm tra kích thước màn hình khi trang được tải
+        window.onload = checkScreenSize;
+
+        // Kiểm tra kích thước màn hình khi cửa sổ được thay đổi kích thước
+        window.onresize = checkScreenSize;
+    </script>
     <!-- Facebook Pixel Code -->
     <script id="facebook-jssdk" src="js/sdk.js#xfbml=1&amp;version=v2.6"></script>
     <script async="" src="js/analytics.js"></script>
