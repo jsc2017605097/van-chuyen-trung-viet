@@ -25,6 +25,7 @@ body {
 .block-clear ul li {
     list-style: none;
 }
+
 span.icon {
     background: url(../images/icon.png) no-repeat 0px 0px transparent;
 }
