@@ -316,16 +316,6 @@
 		type="text/css" media="all">
 	<script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
 	<script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-	<link rel="https://api.w.org/" href="https://orderhangquangchau.com/wp-json/">
-	<link rel="alternate" title="JSON" type="application/json"
-		href="https://orderhangquangchau.com/wp-json/wp/v2/pages/2">
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://orderhangquangchau.com/xmlrpc.php?rsd">
-	<meta name="generator" content="WordPress 6.6.2">
-	<link rel="shortlink" href="https://orderhangquangchau.com/">
-	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-		href="https://orderhangquangchau.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Forderhangquangchau.com%2F">
-	<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-		href="https://orderhangquangchau.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Forderhangquangchau.com%2F&amp;format=xml">
 	<style>
 		.bg {
 			opacity: 0;
@@ -339,6 +329,21 @@
 	</style>
 	<!-- Your customer chat code -->
 	<script src="js/wp-emoji-release.min.js" defer=""></script>
+	<script>
+		function loadHTML(url, id) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(id).innerHTML = html;
+                })
+                .catch(err => console.error(`Failed to load ${id}: ${err}`));
+        }
+
+        // Gọi hàm loadHTML để tải nội dung header và footer
+        loadHTML('header.html', '_header');
+        loadHTML('footer.html', '_footer');
+		loadHTML('mobile.html', '_mobile');
+	</script>
 </head>
 
 <body
@@ -913,268 +918,10 @@
 		}
 	</style>
 
-
-
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHR6VGLT" height="0" width="0"
-			style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
-
 	<div id="wrapper">
 
 
-		<header id="header" class="header has-sticky sticky-jump">
-			<div class="header-wrapper">
-				<div id="top-bar" class="header-top hide-for-sticky nav-dark">
-					<div class="flex-row container">
-						<div class="flex-col hide-for-medium flex-left">
-							<ul class="nav nav-left medium-nav-center nav-small  nav-divided">
-								<li class="html custom html_topbar_right"><img width="30" src="images/tien-te.png">
-									Tỉ giá: : 3620</li>
-								<li class="header-contact-wrapper">
-									<ul id="header-contact" class="nav nav-divided nav-uppercase header-contact">
-
-										<li class="">
-											<a href="mailto:orderhang89@gmail.com" class="tooltip"
-												title="orderhang89@gmail.com">
-												<i class="icon-envelop" style="font-size:16px;"></i> <span>
-													orderhang89@gmail.com </span>
-											</a>
-										</li>
-
-
-										<li class="">
-											<a href="tel:0971.243.666" class="tooltip" title="0971.243.666">
-												<i class="icon-phone" style="font-size:16px;"></i>
-												<span>0971.243.666</span>
-											</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-
-						<div class="flex-col hide-for-medium flex-center">
-							<ul class="nav nav-center nav-small  nav-divided">
-							</ul>
-						</div>
-
-						<div class="flex-col hide-for-medium flex-right">
-							<ul class="nav top-bar-nav nav-right nav-small  nav-divided">
-								<li class="html custom html_topbar_left">
-									<ul class="account-menu">
-										<li><a target="_blank" href="http://my.orderhangquangchau.com/register"><i
-													class="icon-user"></i> Đăng ký</a></li>
-										<li><a target="_blank" href="http://my.orderhangquangchau.com/login"><i
-													class="icon-lock"></i> Đăng nhập</a></li>
-										<li><a target="_blank" href="https://my.orderhangquangchau.com/cart"><i
-													class="icon-shopping-cart"></i> Giỏ hàng</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-
-						<div class="flex-col show-for-medium flex-grow">
-							<ul class="nav nav-center nav-small mobile-nav  nav-divided">
-								<li class="html custom html_topbar_left">
-									<ul class="account-menu">
-										<li><a target="_blank" href="http://my.orderhangquangchau.com/register"><i
-													class="icon-user"></i> Đăng ký</a></li>
-										<li><a target="_blank" href="http://my.orderhangquangchau.com/login"><i
-													class="icon-lock"></i> Đăng nhập</a></li>
-										<li><a target="_blank" href="https://my.orderhangquangchau.com/cart"><i
-													class="icon-shopping-cart"></i> Giỏ hàng</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-
-					</div>
-				</div>
-				<div id="masthead" class="header-main nav-dark">
-					<div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
-
-						<!-- Logo -->
-						<div id="logo" class="flex-col logo">
-
-							<!-- Header logo -->
-							<a href="https://orderhangquangchau.com/"
-								title="HTLLOGISTICS365 – Đặt hàng nhanh chỉ 5-7 ngày Uy tín Giá rẻ" rel="home">
-								<img width="188" height="54" src="images/logo.png" class="header_logo header-logo"
-									alt="HTLLOGISTICS365 – Đặt hàng nhanh chỉ 5-7 ngày Uy tín Giá rẻ"><img
-									width="188" height="54" src="images/logo.png" class="header-logo-dark"
-									alt="HTLLOGISTICS365 – Đặt hàng nhanh chỉ 5-7 ngày Uy tín Giá rẻ"></a>
-						</div>
-
-						<!-- Mobile Left Elements -->
-						<div class="flex-col show-for-medium flex-left">
-							<ul class="mobile-nav nav nav-left ">
-
-								<li class="nav-icon has-icon">
-									<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay"
-										data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu"
-										aria-expanded="false">
-
-										<i class="icon-menu"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<!-- Left Elements -->
-						<div class="flex-col hide-for-medium flex-left
-            flex-grow">
-							<div class="search_auto ">
-								<!-- <form action="" method="post" target="_blank" class="flex-row" id="search-form">
-                      <div class="image-selected image-selected-pc">
-                        <img data-id="2" class="active-seleted" src="/wp-content/themes/flatsome-child/images/taobao.png">
-                        <i class="icon-angle-down"></i>
-                       </div>
-                <ul class="search-hover" id="pc-list-website" style="display: none;">
-                        <li data-id="2">
-                            <img src="/wp-content/themes/flatsome-child/images/taobao.png">
-                        <i class="fa fa-caret-right"></i>
-                        </li>
-                        <li data-id="1">
-                            <img src="/wp-content/themes/flatsome-child/images/1688.png">
-                        </li>
-                        <li data-id="3">
-                            <img src="/wp-content/themes/flatsome-child/images/tmall.png">
-                        </li>
-                        <li data-id="4">
-                            <img src="/wp-content/themes/flatsome-child/images/baidu.png">
-                        </li>
-                       </ul>
-                              <input id="type-website" type="hidden" name="type" value="2" class="form-select">
-                              <input type="text" name="country" placeholder="Từ khóa gợi ý" id="autocomplete-ajax"/>
-                              <input type="hidden" value="" name="query" id="query">
-                              <button type="submit" id="btn_search_pc" class="search-btn"><i class="icon-search"></i></button>
-                          </form>    -->
-								<form action="/tracking" method="post" class="header_form_tracking" id="">
-									<input type="text" name="code" value="" placeholder="Nhập mã vận đơn cần tra cứu">
-									<button type="submit" id="" class=""><i class="icon-search"></i></button>
-								</form>
-							</div>
-
-							<!-- <ul class="header-nav header-nav-main nav nav-left  nav-uppercase" > -->
-
-
-							<!-- </ul> -->
-						</div>
-
-						<!-- Right Elements -->
-						<div class="flex-col hide-for-medium flex-right">
-							<ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
-								<li id="menu-item-1169"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1169 active menu-item-design-default">
-									<a href="https://orderhangquangchau.com/" aria-current="page"
-										class="nav-top-link">Trang chủ</a></li>
-								<li id="menu-item-1159"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1159 menu-item-design-default has-dropdown">
-									<a href="https://orderhangquangchau.com/bang-gia" class="nav-top-link">Bảng giá<i
-											class="icon-angle-down"></i></a>
-									<ul class="sub-menu nav-dropdown nav-dropdown-default">
-										<li id="menu-item-1194"
-											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194">
-											<a href="https://orderhangquangchau.com/bang-gia">Bảng giá dịch vụ đặt hàng
-												Trung Quốc</a></li>
-										<li id="menu-item-1195"
-											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1195">
-											<a href="https://orderhangquangchau.com/bang-gia-ky-gui-hang.html">Bảng giá
-												ký gửi vận chuyển</a></li>
-										<li id="menu-item-1196"
-											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196">
-											<a
-												href="https://orderhangquangchau.com/dich-vu-nap-tien-alipay-thanh-toan-tien-trung-quoc-chuyen-tien-trung.html">Bảng
-												giá dịch vụ chuyển tiền</a></li>
-									</ul>
-								</li>
-								<li id="menu-item-1160"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1160 menu-item-design-default">
-									<a href="https://orderhangquangchau.com/chinh-sach-bao-mat"
-										class="nav-top-link">Chính sách</a></li>
-								<li id="menu-item-1161"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1161 menu-item-design-default">
-									<a href="https://orderhangquangchau.com/huong-dan-mua-hang-tren-taobao-1688"
-										class="nav-top-link">Hướng dẫn</a></li>
-								<li id="menu-item-12"
-									class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12 menu-item-design-default">
-									<a href="https://orderhangquangchau.com/category/tin-tuc" class="nav-top-link">Tin
-										tức</a></li>
-								<li id="menu-item-1168"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1168 menu-item-design-default">
-									<a href="https://orderhangquangchau.com/tracking" class="nav-top-link">Vận đơn</a>
-								</li>
-							</ul>
-						</div>
-
-						<!-- Mobile Right Elements -->
-						<div class="flex-col show-for-medium flex-right">
-							<ul class="mobile-nav nav nav-right ">
-
-							</ul>
-						</div>
-
-					</div>
-
-					<div class="container">
-						<div class="top-divider full-width"></div>
-					</div>
-				</div>
-				<div id="wide-nav" class="header-bottom wide-nav show-for-medium">
-					<div class="flex-row container">
-
-
-
-
-						<div class="flex-col show-for-medium flex-grow">
-							<ul class="nav header-bottom-nav nav-center mobile-nav  nav-uppercase">
-								<div class="search_auto ">
-									<!--
-<form action="" method="post" target="_blank" class="flex-row" id="search-form">
-                      <div class="image-selected image-selected-mb">
-                        <img data-id="2" class="active-seleted" src="/wp-content/themes/flatsome-child/images/taobao.png">
-                        <i class="icon-angle-down"></i>
-                       </div>
-                <ul class="search-hover" id="mobile-list-website" style="display: none;">
-                        <li data-id="2">
-                            <img src="/wp-content/themes/flatsome-child/images/taobao.png">
-                        <i class="fa fa-caret-right"></i>
-                        </li>
-                        <li data-id="1">
-                            <img src="/wp-content/themes/flatsome-child/images/1688.png">
-                        </li>
-                        <li data-id="3">
-                            <img src="/wp-content/themes/flatsome-child/images/tmall.png">
-                        </li>
-                        <li data-id="4">
-                            <img src="/wp-content/themes/flatsome-child/images/baidu.png">
-                        </li>
-                       </ul>
-                              <input id="type-website-mb" type="hidden" name="type" value="2" class="form-select">
-                              <input type="text" name="country" placeholder="Từ khóa gợi ý" id="autocomplete-mobile"/>
-                              <input type="hidden" value="" name="query" id="query-mobile">
-                              <button type="submit" id="btn_search_mobile" class="search-btn"><i class="icon-search"></i></button>
-                          </form>   
--->
-									<form action="/tracking" method="post" class="header_form_tracking" id="">
-										<input type="text" name="code" value=""
-											placeholder="Nhập mã vận đơn cần tra cứu">
-										<button type="submit" id="" class=""><i class="icon-search"></i></button>
-									</form>
-								</div>
-							</ul>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="header-bg-container fill">
-					<div class="header-bg-image fill"></div>
-					<div class="header-bg-color fill"></div>
-				</div>
-			</div>
-		</header>
+		<div id="_header"></div>
 
 
 		<main id="main" class="">
@@ -1849,7 +1596,7 @@
 
 										<div class="ux-menu-link flex menu-item">
 											<a class="ux-menu-link__link flex"
-												href="https://orderhangquangchau.com/bang-gia">
+												href="/bang-gia.html">
 												<i class="ux-menu-link__icon text-center icon-star-o"></i> <span
 													class="ux-menu-link__text">
 													Bảng giá đặt hàng </span>
@@ -1858,7 +1605,7 @@
 
 										<div class="ux-menu-link flex menu-item">
 											<a class="ux-menu-link__link flex"
-												href="https://orderhangquangchau.com/bang-gia-ky-gui-hang.html">
+												href="/bang-gia-ky-gui-hang.html">
 												<i class="ux-menu-link__icon text-center icon-star-o"></i> <span
 													class="ux-menu-link__text">
 													Bảng giá ký gửi vận chuyển </span>
@@ -1867,7 +1614,7 @@
 
 										<div class="ux-menu-link flex menu-item">
 											<a class="ux-menu-link__link flex"
-												href="https://orderhangquangchau.com/bang-gia-ky-gui-hang.html">
+												href="/bang-gia-ky-gui-hang.html">
 												<i class="ux-menu-link__icon text-center icon-star-o"></i> <span
 													class="ux-menu-link__text">
 													Bảng giá vận chuyển hàng lô, hàng nặng </span>
@@ -2329,7 +2076,7 @@
 										</div>
 										<div class="col post-item">
 											<div class="col-inner">
-												<a href="https://orderhangquangchau.com/bang-gia-ky-gui-hang.html"
+												<a href="/bang-gia-ky-gui-hang.html"
 													class="plain">
 													<div
 														class="box box-default box-text-bottom box-blog-post has-hover">
@@ -2401,318 +2148,12 @@
 		<input type="hidden" id="search_data">
 		<input type="hidden" id="search_value">
 		<div id="autocomplete-wrapper"></div>
-		<footer id="footer" class="footer-wrapper">
-
-			<section class="section" id="section_456642638">
-				<div class="bg section-bg fill bg-fill  bg-loaded">
-
-
-
-
-
-				</div>
-
-
-
-				<div class="section-content relative">
-
-
-					<div class="row" id="row-1969181769">
-
-
-						<div id="col-705402192" class="col medium-4 small-12 large-4">
-							<div class="col-inner">
-
-
-
-								<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1050268221">
-									<div class="img-inner dark">
-										<img width="188" height="54" src="images/logo.png"
-											class="attachment-original size-original" alt="" decoding="async"
-											loading="lazy">
-									</div>
-
-									<style>
-										#image_1050268221 {
-											width: 48%;
-										}
-									</style>
-								</div>
-
-
-								<div id="text-2477480072" class="text">
-
-
-									<p>HTLLOGISTICS365 là đơn vị cung cấp dịch vụ mua hàng và vận chuyển hàng từ
-										Trung Quốc về Việt Nam.<br>
-										Với 8 năm kinh nghiệm, chúng tôi cam kết mang tới khách hàng một dịch vụ chuyên
-										nghiệp, hỗ trợ hết mình, luôn đặt chữ tín lên hàng đầu là phương châm làm việc.
-									</p>
-									<div class="item info-detail last">à</div>
-
-									<style>
-										#text-2477480072 {
-											color: rgb(255, 255, 255);
-										}
-
-										#text-2477480072>* {
-											color: rgb(255, 255, 255);
-										}
-									</style>
-								</div>
-
-
-								<div class="icon-box featured-box icon-box-left text-left">
-									<div class="icon-box-img" style="width: 46px">
-										<div class="icon">
-											<div class="icon-inner">
-												<img width="300" height="300"
-													src="images/91610474808mj8u1hoaak-300x300.png"
-													class="attachment-medium size-medium" alt="" decoding="async"
-													loading="lazy"
-													srcset="images/91610474808mj8u1hoaak-300x300.png 300w, images/91610474808mj8u1hoaak-150x150.png 150w, images/91610474808mj8u1hoaak.png 422w"
-													sizes="(max-width: 300px) 100vw, 300px">
-											</div>
-										</div>
-									</div>
-									<div class="icon-box-text last-reset">
-
-
-										<div id="text-3316237783" class="text">
-
-
-											<h3><strong>0971.243.666</strong></h3>
-
-											<style>
-												#text-3316237783 {
-													line-height: 2.65;
-													text-align: left;
-													color: rgb(255, 255, 255);
-												}
-
-												#text-3316237783>* {
-													color: rgb(255, 255, 255);
-												}
-											</style>
-										</div>
-
-
-									</div>
-								</div>
-
-
-
-							</div>
-						</div>
-
-
-
-						<div id="col-1575671019" class="col medium-4 small-12 large-4">
-							<div class="col-inner">
-
-
-
-								<div class="container section-title-container">
-									<h3 class="section-title section-title-normal"><b></b><span
-											class="section-title-main" style="color:rgb(255, 255, 255);">Hỗ trợ khách
-											hàng</span><b></b></h3>
-								</div>
-
-
-								<div class="icon-box featured-box icon-box-top text-left">
-									<div class="icon-box-text last-reset">
-
-
-										<div id="text-2637652061" class="text">
-
-
-											<h3>Chi nhánh Hà Nội</h3>
-											<p><i class="icon-map-pin-fill"> </i> Số 117 Trần Cung - Cầu Giấy - Hà Nội
-											</p>
-											<p><i class="icon-phone"> </i>0971.243.666</p>
-											<h3><i class="icon-map-pin-fill"> </i> Chi nhánh Đà Nẵng</h3>
-											<p>Nguyễn Chích - Đà Nẵng</p>
-											<p><i class="icon-phone"></i> 070.591.7777</p>
-											<h3>Chi nhánh TP.HCM</h3>
-											<p><i class="icon-map-pin-fill"> </i> Ba Vân, P14, Quận Tân Bình - TP.HCM
-											</p>
-											<p><i class="icon-phone"></i> 0902.632.512</p>
-
-											<style>
-												#text-2637652061 {
-													font-size: 0.8rem;
-													color: rgb(255, 255, 255);
-												}
-
-												#text-2637652061>* {
-													color: rgb(255, 255, 255);
-												}
-											</style>
-										</div>
-
-
-									</div>
-								</div>
-
-
-
-							</div>
-						</div>
-
-
-
-						<div id="col-1964815603" class="col medium-4 small-12 large-4">
-							<div class="col-inner text-center">
-
-
-
-								<div class="container section-title-container">
-									<h3 class="section-title section-title-normal"><b></b><span
-											class="section-title-main"
-											style="color:rgb(255, 255, 255);">Facebook</span><b></b></h3>
-								</div>
-
-
-
-								<div class="fb-page" data-href="https://www.facebook.com/orderhangquangchaudanang/"
-									data-tabs="timeline" data-width="" data-height="70" data-small-header="false"
-									data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-									<blockquote cite="https://www.facebook.com/orderhangquangchaudanang/"
-										class="fb-xfbml-parse-ignore"><a
-											href="https://www.facebook.com/orderhangquangchaudanang/">Order hàng Quảng
-											Châu - CN Đà Nẵng</a></blockquote>
-								</div>
-
-
-
-								<div class="zalo-container right" style="bottom:70px;">
-									<a id="zalo-btn" href="https://zalo.me/0393241666" target="_blank"
-										rel="noopener noreferrer nofollow">
-										<div class="animated_zalo infinite zoomIn_zalo cmoz-alo-circle"></div>
-										<div class="animated_zalo infinite pulse_zalo cmoz-alo-circle-fill"></div>
-										<span><img src="images/zalo-2.png" alt="Contact Me on Zalo"></span>
-									</a>
-								</div>
-
-
-							</div>
-						</div>
-
-
-
-					</div>
-
-				</div>
-
-
-				<style>
-					#section_456642638 {
-						padding-top: 30px;
-						padding-bottom: 30px;
-						background-color: #284386;
-					}
-
-					#section_456642638 .ux-shape-divider--top svg {
-						height: 150px;
-						--divider-top-width: 100%;
-					}
-
-					#section_456642638 .ux-shape-divider--bottom svg {
-						height: 150px;
-						--divider-width: 100%;
-					}
-				</style>
-			</section>
-
-			<div class="absolute-footer dark medium-text-center text-center">
-				<div class="container clearfix">
-
-
-					<div class="footer-primary pull-left">
-						<div class="copyright-footer">
-							Copyright by Order hang quang chau @ 2014 </div>
-					</div>
-				</div>
-			</div>
-
-			<a href="#top"
-				class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle"
-				id="top-link" aria-label="Go to top"><i class="icon-angle-up"></i></a>
-
-		</footer>
+		
+		<div id="_footer"></div>
 
 	</div>
+	<div id="_mobile"></div>
 	<script src="js/jquery-ui.js"></script>
-	<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
-
-
-		<div class="sidebar-menu no-scrollbar ">
-
-
-			<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
-				<li
-					class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1169">
-					<a href="https://orderhangquangchau.com/" aria-current="page">Trang chủ</a></li>
-				<li
-					class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1159">
-					<a href="https://orderhangquangchau.com/bang-gia">Bảng giá</a>
-					<ul class="sub-menu nav-sidebar-ul children">
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194"><a
-								href="https://orderhangquangchau.com/bang-gia">Bảng giá dịch vụ đặt hàng Trung Quốc</a>
-						</li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1195"><a
-								href="https://orderhangquangchau.com/bang-gia-ky-gui-hang.html">Bảng giá ký gửi vận
-								chuyển</a></li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196"><a
-								href="https://orderhangquangchau.com/dich-vu-nap-tien-alipay-thanh-toan-tien-trung-quoc-chuyen-tien-trung.html">Bảng
-								giá dịch vụ chuyển tiền</a></li>
-					</ul>
-				</li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1160"><a
-						href="https://orderhangquangchau.com/chinh-sach-bao-mat">Chính sách</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1161"><a
-						href="https://orderhangquangchau.com/huong-dan-mua-hang-tren-taobao-1688">Hướng dẫn</a></li>
-				<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a
-						href="https://orderhangquangchau.com/category/tin-tuc">Tin tức</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1168"><a
-						href="https://orderhangquangchau.com/tracking">Vận đơn</a></li>
-				<li class="header-contact-wrapper">
-					<ul id="header-contact" class="nav nav-divided nav-uppercase header-contact">
-
-						<li class="">
-							<a href="mailto:orderhang89@gmail.com" class="tooltip" title="orderhang89@gmail.com">
-								<i class="icon-envelop" style="font-size:16px;"></i> <span>
-									orderhang89@gmail.com </span>
-							</a>
-						</li>
-
-
-						<li class="">
-							<a href="tel:0971.243.666" class="tooltip" title="0971.243.666">
-								<i class="icon-phone" style="font-size:16px;"></i> <span>0971.243.666</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="html custom html_topbar_left">
-					<ul class="account-menu">
-						<li><a target="_blank" href="http://my.orderhangquangchau.com/register"><i
-									class="icon-user"></i> Đăng ký</a></li>
-						<li><a target="_blank" href="http://my.orderhangquangchau.com/login"><i class="icon-lock"></i>
-								Đăng nhập</a></li>
-						<li><a target="_blank" href="https://my.orderhangquangchau.com/cart"><i
-									class="icon-shopping-cart"></i> Giỏ hàng</a></li>
-					</ul>
-				</li>
-				<li class="html custom html_topbar_right"><img width="30" src="images/tien-te.png">
-					Tỉ giá: : 3620</li>
-			</ul>
-
-
-		</div>
-
-
-	</div>
 	<style id="global-styles-inline-css" type="text/css">
 		:root {
 			--wp--preset--aspect-ratio--square: 1;
